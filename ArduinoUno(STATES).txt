@@ -22,6 +22,7 @@ void loop() {
     {
       state = STATE_ON;
     }
+    delay(250);
   }
   switch(state)
   {

@@ -1,0 +1,21 @@
+int estadoPulsador = 0;
+int estadoLed = 0;
+
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(3, INPUT);
+}
+
+void loop()
+{
+  estadoPulsador = digitalRead(3);
+  estadoLed = digitalRead(13);
+  
+  if (estadoPulsador && !estadoLed)
+  	digitalWrite(13, HIGH);
+  else if(estadoPulsador && estadoLed)
+    digitalWrite(13, LOW);
+    
+	delay(1000);
+}
